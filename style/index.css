@@ -1,29 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,600,500,700");
-p {
-  margin-bottom: 1em; }
-
-.heading {
-  margin-bottom: 0.618em; }
-  .heading.-large, h1 {
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 30px; }
-  .heading.-medium, h2 {
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 20px; }
-  .heading.-small, h3 {
-    font-size: 12px;
-    font-weight: bold;
-    line-height: 13.33333px; }
-  .heading.-smallest {
-    font-size: 10px;
-    font-weight: bold; }
-
-body {
-  margin: 0px;
-  padding: 0px; }
-
+@import url("https://fonts.googleapis.com/css?family=Aldrich|Orbitron");
 body * {
   box-sizing: border-box; }
 
@@ -37,362 +12,479 @@ input {
   box-sizing: border-box;
   border: none; }
 
-.resize-container:after, ul.inline-list:after, .title ul.designation:after, .page ul.work-history > li:after {
+.resize-container:after, .modal-window .content .bar:after, #missions-selected > ul.missions > li:after, #mission-wizard .wizard ul.panes:after, #mission-wizard .wizard ul.status:after {
   content: "";
   display: table;
   clear: both; }
 
-ul.undo-list, ul.inline-list, .title ul.designation, .page ul.work-history {
+ul.undo-list, ul.deck, #missions-selected > ul.missions, #mission-wizard .wizard ul.panes, #mission-wizard .wizard ul.status {
   list-style: none;
   margin: 0px;
   padding: 0px;
   display: block; }
 
-ul.inline-list {
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
-  display: inline-block; }
-  ul.inline-list > li {
-    float: left; }
-
-.app-layer, body, .top-bar, .cover {
-  max-width: 1200px;
-  margin: 0px auto;
-  width: 100%; }
+[ng-click] {
+  cursor: pointer; }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  margin: 0px;
   background: black; }
 
-.ruby-gem {
-  color: rgba(255, 255, 255, 0.8);
-  background: #e9573f;
-  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.39); }
-
-.top-bar-transition, .introduction .contact a, .top-bar, .top-bar .name, .top-bar .title, .top-bar .image > img, .top-bar .contact, .top-bar .contact > .link, #nishants-site .overview, #nishants-site .overview .profile-image img, .cover .bg-wrapper > img.bg {
-  -webkit-transition: all 300ms ease;
-  -moz-transition: all 300ms ease;
-  -o-transition: all 300ms ease;
-  transition: all 300ms ease; }
-
-.bold-text, .introduction .name, .page ul.work-history > li .detail > label {
-  font-weight: 700;
-  color: rgba(0, 0, 0, 0.7); }
-
-.small-light-text {
-  font-size: small;
-  color: rgba(0, 0, 0, 0.5);
-  font-weight: 300; }
-
-.small-bold-text, .top-bar .name, .top-bar .contact > .link {
-  font-size: small;
-  font-weight: 500; }
-
-.under-lined {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
-  padding-bottom: 10px; }
-
-.page h1.head {
-  padding: 10px;
-  margin-left: 10px;
-  margin-bottom: 20px; }
-
-.invert-gradience {
-  background: -moz-linear-gradient(bottom, black 0%, transparent 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(bottom, black 0%, transparent 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(bottom, black 0%, transparent 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
-
-.gradience {
-  background: -moz-linear-gradient(top, #000000 10%, rgba(255, 255, 255, 0) 90%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #000000 10%, rgba(255, 255, 255, 0) 90%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(top, #000000 10%, rgba(255, 255, 255, 0) 90%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00ffffff',GradientType=0 );
-  /* IE6-9 */ }
-
-.overview {
-  margin: 0px 20px;
-  padding-top: 215px; }
-  .overview .profile-image {
-    position: relative;
-    top: 100px; }
-    .overview .profile-image img {
-      display: block;
-      margin: auto;
-      height: 200px;
-      border: 10px solid white;
-      border-radius: 15px; }
-
-.page {
-  margin: 5px auto;
-  background: white;
-  padding: 100px 20px 100px 20px;
-  color: rgba(0, 0, 0, 0.91);
-  border-radius: 3px; }
-
-.introduction {
-  margin: 0px auto;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  padding-bottom: 10px; }
-  .introduction .name {
-    text-align: center; }
-  .introduction .contact {
-    padding: 10px;
-    text-align: center; }
-    .introduction .contact a {
-      display: inline-block;
-      margin: 10px 2.5px;
-      font-size: large;
-      border-radius: 3px;
-      padding: 10px 50px;
-      border: 1px solid rgba(0, 0, 0, 0.1); }
-
-.about-me {
-  display: none;
-  padding-top: 10px; }
-  .about-me .text {
-    padding: 10px;
-    text-align: center;
-    color: rgba(0, 0, 0, 0.5);
-    font-weight: 300; }
-
-.top-bar {
-  box-shadow: 0 0 5px 1px rgba(1, 1, 1, 0.3);
-  position: fixed;
-  z-index: 99;
-  top: 0px;
-  height: 100px;
-  background: white;
+#main-content {
+  position: relative;
   overflow: hidden; }
-  .top-bar .heading {
-    position: relative; }
-  .top-bar .name {
-    text-align: center;
-    line-height: 25px; }
-  .top-bar .title .designation {
-    font-size: small;
-    font-weight: 500;
-    line-height: 25px; }
-  .top-bar .image {
-    padding: 5px; }
-    .top-bar .image > img {
-      display: block;
-      margin: auto;
-      height: 35px;
-      border-radius: 2px; }
-  .top-bar .contact {
-    position: absolute;
-    bottom: 15px;
-    right: 0px;
-    text-align: right;
-    padding: 0px 20px;
-    width: 100%; }
-    .top-bar .contact .twitter.link, .top-bar .contact .linkedin.link {
-      float: left;
-      margin-right: 10px; }
-    .top-bar .contact .stack-overflow.link, .top-bar .contact .mailto.link, .top-bar .contact .github.link {
-      float: right;
-      margin-left: 10px; }
-    .top-bar .contact > .link {
-      border: 1px solid transparent !important; }
+  #main-content button {
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.95);
+    border: 1px solid transparent;
+    font-size: large;
+    background-color: #3dc743;
+    -webkit-transition: all 150ms ease;
+    -moz-transition: all 150ms ease;
+    -o-transition: all 150ms ease;
+    transition: all 150ms ease; }
+  #main-content .thumbnail, #main-content ul.deck > li .card .icon, ul.deck > li .card #main-content .icon {
+    height: 50px;
+    width: 50px; }
+  #main-content .title-text, #main-content button, #main-content #missions-selected > ul.missions > li, #main-content #mission-wizard .wizard ul.status, #mission-wizard .wizard #main-content ul.status, #main-content #mission-wizard .wizard .window ul.panes > li, #mission-wizard .wizard .window #main-content ul.panes > li {
+    font-family: "Aldrich", sans-serif; }
 
-#nishants-site:not(.show-top-bar) .top-bar {
-  pointer-events: none;
+.modal-window {
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+  padding: 10px;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.5);
+  line-height: 100vh;
+  text-align: center;
+  -webkit-transition: opacity 150ms ease;
+  -moz-transition: opacity 150ms ease;
+  -o-transition: opacity 150ms ease;
+  transition: opacity 150ms ease; }
+  .modal-window .content {
+    display: inline-block;
+    line-height: 25px;
+    color: #00FF80;
+    padding: 10px;
+    background: black;
+    border: 1px solid rgba(0, 255, 128, 0.3); }
+    .modal-window .content .bar {
+      padding-bottom: 10px; }
+      .modal-window .content .bar .close-modal {
+        float: right;
+        padding: 10px;
+        border: 1px solid rgba(0, 255, 128, 0.3); }
+
+.modal-window:not(.show) {
   opacity: 0;
-  -webkit-transform: translateY(-100%);
-  -moz-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  -o-transform: translateY(-100%);
-  transform: translateY(-100%); }
-  #nishants-site:not(.show-top-bar) .top-bar .image > img {
-    opacity: 0; }
+  pointer-events: none; }
+  .modal-window:not(.show) * {
+    pointer-events: none !important; }
 
-#nishants-site:not(.show-top-bar-name) .top-bar .name {
-  opacity: 0;
-  -webkit-transform: translateY(100px);
-  -moz-transform: translateY(100px);
-  -ms-transform: translateY(100px);
-  -o-transform: translateY(100px);
-  transform: translateY(100px); }
+ul.deck {
+  display: block; }
+  ul.deck > li {
+    display: inline-block;
+    margin: 10px; }
+    ul.deck > li .card {
+      padding: 10px;
+      border: 1px solid rgba(0, 0, 0, 0.1); }
+      ul.deck > li .card .name {
+        padding-top: 10px; }
+      ul.deck > li .card .caption {
+        font-size: small;
+        font-style: italic;
+        line-height: 15px;
+        opacity: 0.5; }
+      ul.deck > li .card .icon {
+        display: block;
+        margin: auto; }
 
-#nishants-site:not(.show-top-bar-title) .top-bar .title {
-  opacity: 0;
-  -webkit-transform: translateY(100px);
-  -moz-transform: translateY(100px);
-  -ms-transform: translateY(100px);
-  -o-transform: translateY(100px);
-  transform: translateY(100px); }
-
-#nishants-site:not(.show-top-bar-contact) .top-bar .contact {
-  opacity: 0;
-  -webkit-transform: translateY(100px);
-  -moz-transform: translateY(100px);
-  -ms-transform: translateY(100px);
-  -o-transform: translateY(100px);
-  transform: translateY(100px); }
-
-#nishants-site.show-top-bar .cover .bg-wrapper img.bg {
-  opacity: 0; }
-#nishants-site.show-top-bar .overview .profile-image > img {
-  opacity: 0;
-  -webkit-transform: translateY(-100%);
-  -moz-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  -o-transform: translateY(-100%);
-  transform: translateY(-100%); }
-
-.cover {
-  margin: auto;
-  display: block;
+#background {
   position: fixed;
   top: 0;
-  left: auto;
+  left: 0;
+  height: 100vh;
   width: 100%;
-  z-index: -1;
-  padding-bottom: 100vh; }
-  .cover .bg-wrapper {
-    background: #000000;
-    padding: 0px 20px; }
-    .cover .bg-wrapper > img.bg {
-      display: block;
-      margin: auto;
-      width: calc(100% - 2 * 20px); }
-  .cover .gradience {
+  background: black; }
+  #background .star-world {
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    background: url(../images/twinkle.gif) repeat fixed center center; }
+  #background .space-station {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    height: 100vh;
-    background: black; }
+    display: block; }
 
-.title {
-  margin: auto;
+@keyframes travelerSky {
+  0% {
+    -webkit-transform: scale(1.5) rotate(0deg);
+    -moz-transform: scale(1.5) rotate(0deg);
+    -ms-transform: scale(1.5) rotate(0deg);
+    -o-transform: scale(1.5) rotate(0deg);
+    transform: scale(1.5) rotate(0deg); }
+  50% {
+    -webkit-transform: scale(2) rotate(-360deg);
+    -moz-transform: scale(2) rotate(-360deg);
+    -ms-transform: scale(2) rotate(-360deg);
+    -o-transform: scale(2) rotate(-360deg);
+    transform: scale(2) rotate(-360deg); }
+  100% {
+    -webkit-transform: scale(1.5) rotate(0deg);
+    -moz-transform: scale(1.5) rotate(0deg);
+    -ms-transform: scale(1.5) rotate(0deg);
+    -o-transform: scale(1.5) rotate(0deg);
+    transform: scale(1.5) rotate(0deg); } }
+.traveler-sky {
+  animation: travelerSky 700s infinite;
+  animation-timing-function: linear; }
+
+#game-result .content {
+  padding: 20px;
+  border: 1px solid rgba(0, 255, 128, 0.3); }
+  #game-result .content .message h1 {
+    margin: 0px; }
+  #game-result .content .restart {
+    margin-top: 20px; }
+    #game-result .content .restart button {
+      padding: 10px 50px; }
+  #game-result .content .loader {
+    padding: 20px;
+    font-size: large; }
+
+#game-result.loading .content .restart {
+  display: none; }
+
+#game-result:not(.lost) .content .message.lost {
+  display: none; }
+
+#game-result:not(.loading) .content .loader {
+  display: none; }
+
+#game-result:not(.won) .content .won.message {
+  display: none; }
+
+#help .content {
+  padding: 20px;
+  border: 1px solid; }
+  #help .content .message {
+    text-align: left; }
+  #help .content .skip {
+    margin-top: 10px;
+    padding: 10px 50px; }
+
+#missions-home {
+  color: white;
   text-align: center;
-  line-height: 35px; }
-  .title ul.designation {
-    display: inline-block !important;
-    font-weight: 600;
-    color: rgba(0, 0, 0, 0.5); }
-    .title ul.designation > li {
-      float: left; }
-    .title ul.designation > li:not(:last-child):after {
-      display: inline-block;
-      content: "|";
-      width: 20px;
-      text-align: center;
-      font-size: larger; }
-
-.footer.page {
-  text-align: center;
-  padding: 10px; }
-
-.social.contact .mailto:hover {
-  color: white;
-  background-color: #1a84bc;
-  border: 1px solid #1a84bc; }
-.social.contact .mailto {
-  color: #1a84bc; }
-.social.contact .twitter:hover {
-  color: white;
-  background-color: #1da1f2;
-  border: 1px solid #1da1f2; }
-.social.contact .twitter {
-  color: #1da1f2; }
-.social.contact .stack-overflow:hover {
-  color: white;
-  background-color: #f48024;
-  border: 1px solid #f48024; }
-.social.contact .stack-overflow {
-  color: #f48024; }
-.social.contact .linkedin:hover {
-  color: white;
-  background-color: #1a84bc;
-  border: 1px solid #1a84bc; }
-.social.contact .linkedin {
-  color: #1a84bc; }
-.social.contact .github:hover {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.65);
-  border: 1px solid rgba(0, 0, 0, 0.65); }
-.social.contact .github {
-  color: rgba(0, 0, 0, 0.65); }
-
-.page ul.work-history {
-  margin-left: 40px;
-  margin-right: 40px; }
-  .page ul.work-history > li {
-    display: block;
+  margin: auto; }
+  #missions-home #help-button {
     padding: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
-    line-height: 60px; }
-    .page ul.work-history > li .logo {
-      float: left;
-      width: 60px;
-      height: 60px;
-      overflow: hidden; }
-      .page ul.work-history > li .logo img, .page ul.work-history > li .logo .img {
-        display: inline-block;
+    font-size: 30px; }
+    #missions-home #help-button > .fa {
+      color: rgba(255, 255, 255, 0.3);
+      text-align: center; }
+  #missions-home #mission-action {
+    width: 100%;
+    margin: 10px auto;
+    padding: 0px 10px;
+    max-width: 500px; }
+    #missions-home #mission-action > button {
+      width: 100%;
+      opacity: 0.95; }
+
+#missions-selected > ul.missions {
+  padding-top: 10px;
+  background: rgba(0, 0, 0, 0.6); }
+  #missions-selected > ul.missions > li {
+    display: block;
+    margin: auto;
+    line-height: 40px;
+    color: #00FF80;
+    text-transform: capitalize;
+    text-align: center;
+    width: 570px;
+    padding: 0px 10px; }
+    #missions-selected > ul.missions > li .planet, #missions-selected > ul.missions > li .vehicle, #missions-selected > ul.missions > li .overview, #missions-selected > ul.missions > li .cancel {
+      float: left; }
+    #missions-selected > ul.missions > li .planet {
+      width: 100px; }
+    #missions-selected > ul.missions > li .vehicle {
+      width: 150px; }
+    #missions-selected > ul.missions > li .overview {
+      width: 250px; }
+    #missions-selected > ul.missions > li .cancel {
+      width: 50px; }
+
+.appear-from-bottom, #missions-selected > ul.missions > li {
+  animation: fromBottom 150ms;
+  animation-timing-function: ease; }
+
+@keyframes fromBottom {
+  0% {
+    opacity: 0; }
+  1% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0); } }
+.game-progress {
+  width: calc(100% - 40px);
+  max-width: 500px;
+  margin: 10px auto;
+  height: 6px;
+  position: relative;
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid rgba(61, 199, 67, 0.3);
+  -webkit-transition: opacity 500ms cubic-bezier(0.64, 0.57, 0.67, 1);
+  -moz-transition: opacity 500ms cubic-bezier(0.64, 0.57, 0.67, 1);
+  -o-transition: opacity 500ms cubic-bezier(0.64, 0.57, 0.67, 1);
+  transition: opacity 500ms cubic-bezier(0.64, 0.57, 0.67, 1); }
+
+.game-progress:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background: #3dc743;
+  content: " ";
+  border-radius: 3px;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transition: all 500ms cubic-bezier(0.64, 0.57, 0.67, 1);
+  -moz-transition: all 500ms cubic-bezier(0.64, 0.57, 0.67, 1);
+  -o-transition: all 500ms cubic-bezier(0.64, 0.57, 0.67, 1);
+  transition: all 500ms cubic-bezier(0.64, 0.57, 0.67, 1); }
+
+.game-progress.two:after {
+  -webkit-transform: scaleX(0.5);
+  -moz-transform: scaleX(0.5);
+  -ms-transform: scaleX(0.5);
+  -o-transform: scaleX(0.5);
+  transform: scaleX(0.5); }
+
+.game-progress.three:after {
+  -webkit-transform: scaleX(0.75);
+  -moz-transform: scaleX(0.75);
+  -ms-transform: scaleX(0.75);
+  -o-transform: scaleX(0.75);
+  transform: scaleX(0.75); }
+
+.game-progress.four {
+  opacity: 0;
+  -webkit-transition-delay: 500ms;
+  -moz-transition-delay: 500ms;
+  -ms-transition-delay: 500ms;
+  -o-transition-delay: 500ms;
+  transition-delay: 500ms; }
+
+.game-progress.four:after {
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -o-transform: scaleX(1);
+  transform: scaleX(1); }
+
+.game-progress.one:after {
+  -webkit-transform: scaleX(0.25);
+  -moz-transform: scaleX(0.25);
+  -ms-transform: scaleX(0.25);
+  -o-transform: scaleX(0.25);
+  transform: scaleX(0.25); }
+
+#mission-planet ul.deck > li.loader {
+  font-size: 40px;
+  border: 1px solid transparent !important; }
+#mission-planet ul.deck > li.assigned {
+  display: none; }
+
+#mission-vehicle ul.deck > li.none-left, #mission-vehicle ul.deck > li.no-range {
+  position: relative;
+  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important; }
+#mission-vehicle ul.deck > li:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  line-height: 140px;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.95);
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  content: " ";
+  pointer-events: none;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease; }
+#mission-vehicle ul.deck > li.no-range:after, #mission-vehicle ul.deck > li.none-left:after {
+  opacity: 1;
+  cursor: not-allowed; }
+#mission-vehicle ul.deck > li.no-range:after {
+  content: "Out Of Range"; }
+#mission-vehicle ul.deck > li.none-left:after {
+  content: "None Left"; }
+
+#mission-wizard .wizard {
+  max-width: 500px;
+  margin: auto; }
+  #mission-wizard .wizard ul.panes > li, #mission-wizard .wizard ul.status > li {
+    float: left; }
+  #mission-wizard .wizard ul.status {
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+    font-size: small; }
+    #mission-wizard .wizard ul.status > li {
+      position: relative;
+      width: 50%;
+      padding: 10px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.95);
+      background: #1e6321;
+      overflow: hidden;
+      border: 1px solid transparent;
+      opacity: 0.5;
+      -webkit-transition: all 500ms ease;
+      -moz-transition: all 500ms ease;
+      -o-transition: all 500ms ease;
+      transition: all 500ms ease; }
+      #mission-wizard .wizard ul.status > li label {
+        position: relative;
+        z-index: 2; }
+      #mission-wizard .wizard ul.status > li .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: #3dc743;
+        -webkit-transition: all 500ms ease;
+        -moz-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+        transition: all 500ms ease; }
+    #mission-wizard .wizard ul.status > li.planet .bg {
+      -webkit-transform: translateX(100%);
+      -moz-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+      -o-transform: translateX(100%);
+      transform: translateX(100%); }
+    #mission-wizard .wizard ul.status > li.vehicle .bg {
+      -webkit-transform: translateX(-100%);
+      -moz-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      -o-transform: translateX(-100%);
+      transform: translateX(-100%); }
+  #mission-wizard .wizard .window {
+    max-width: 100%;
+    overflow: hidden; }
+    #mission-wizard .wizard .window ul.panes {
+      width: 200%;
+      overflow: hidden;
+      -webkit-transition: transform 500ms ease;
+      -moz-transition: transform 500ms ease;
+      -o-transition: transform 500ms ease;
+      transition: transform 500ms ease; }
+      #mission-wizard .wizard .window ul.panes > li {
+        width: 50%;
         max-height: 100%;
-        max-width: 100%; }
-      .page ul.work-history > li .logo .img {
-        font-size: 30px;
-        line-height: 60px;
-        display: block;
+        overflow: auto;
         text-align: center; }
-    .page ul.work-history > li .detail {
-      float: left;
-      max-width: calc(100% - 80px); }
-      .page ul.work-history > li .detail > label {
-        line-height: 20px;
-        text-align: left;
-        display: block;
-        padding: 0px 10px 0px 15px;
-        font-size: small;
-        margin: 0px; }
-      .page ul.work-history > li .detail > label:not(.title) {
-        font-size: small;
-        color: rgba(0, 0, 0, 0.5); }
-      .page ul.work-history > li .detail .link {
-        color: #bda6e0; }
+        #mission-wizard .wizard .window ul.panes > li ul.deck {
+          min-height: 300px; }
+          #mission-wizard .wizard .window ul.panes > li ul.deck > li {
+            border: 1px solid; }
+#mission-wizard .active-status, #mission-wizard .wizard.vehicle-select ul.status li.vehicle, #mission-wizard .wizard:not(.vehicle-select) ul.status li.planet {
+  border: 1px solid black;
+  color: white;
+  opacity: 1; }
+  #mission-wizard .active-status .bg, #mission-wizard .wizard.vehicle-select ul.status li.vehicle .bg, #mission-wizard .wizard:not(.vehicle-select) ul.status li.planet .bg {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0); }
+#mission-wizard .wizard.vehicle-select .window ul.panes {
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%); }
+
+#mission-wizard:not(.show) {
+  opacity: 0;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none; }
 
 @media screen and (max-width: 750px) {
-  .page {
-    margin: 0px;
-    border-radius: 0px; }
-    .page .head {
-      text-align: center;
-      padding-bottom: 20px; }
+  #mission-planet ul.deck {
+    width: 300px;
+    margin: auto; }
+    #mission-planet ul.deck > li {
+      float: left;
+      height: 125px;
+      width: 125px;
+      overflow: hidden; }
 
-  .page ul.work-history > li {
-    margin: 20px auto; }
-    .page ul.work-history > li > .logo {
-      float: none;
-      width: auto;
-      text-align: center;
-      display: block; }
-    .page ul.work-history > li > .detail {
-      margin-top: 20px;
-      float: none;
-      max-width: 100%; }
-      .page ul.work-history > li > .detail > label {
-        text-align: center; }
-      .page ul.work-history > li > .detail > label.period {
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
-        margin-top: 10px;
-        padding-top: 10px; }
-      .page ul.work-history > li > .detail label.title.link {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        margin-bottom: 10px;
-        padding-bottom: 10px; }
+  #mission-vehicle ul.deck {
+    margin: auto;
+    width: 320px; }
+    #mission-vehicle ul.deck > li {
+      float: left;
+      margin: 5px;
+      width: 140px;
+      overflow: hidden;
+      font-size: 13px; }
 
-  .top-bar {
-    margin: 0px;
-    width: 100%; } }
+  #missions-selected > ul.missions > li {
+    width: auto;
+    margin: 10px;
+    border: 1px solid rgba(0, 255, 128, 0.3); }
+    #missions-selected > ul.missions > li .planet, #missions-selected > ul.missions > li .vehicle, #missions-selected > ul.missions > li .overview, #missions-selected > ul.missions > li .cancel {
+      width: 100%;
+      text-align: center;
+      float: none;
+      display: block;
+      padding-left: 10px; }
+    #missions-selected > ul.missions > li .cancel .mobile-only {
+      opacity: 0.7;
+      border-top: 1px solid rgba(0, 255, 128, 0.3);
+      padding-right: 10px; }
+
+  .no-mobile {
+    display: none !important; } }
+@media screen and (min-width: 750px) {
+  .mobile-only {
+    display: none !important; } }
 
 /*# sourceMappingURL=index.css.map */

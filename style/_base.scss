@@ -1,11 +1,3 @@
-@import "vars";
-@import "typography";
-
-body{
-  margin: 0px;
-  padding: 0px;
-}
-
 body * {
   box-sizing: border-box;
 }
@@ -84,22 +76,6 @@ ul.undo-list{
   display: block;
 }
 
-ul.inline-list{
-  @extend .resize-container;
-  @extend .undo-list;
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
-  display: inline-block;
-  > li {
-    float: left;
-  }
+[ng-click]{
+  cursor: pointer;
 }
-
-//[ng-repeat]{
-//  @include transition(all 500ms $defaultTransitionFunction);
-//}
-//
-//[ng-repeat]:not(.display-element){
-//  opacity: 0;
-//}

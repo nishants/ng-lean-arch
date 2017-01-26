@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AACE,0CAAQ;EACN,cAAc,EAAE,IAAI;EACpB,OAAO,EAAE,CAAC",
-"sources": ["top_bar.scss"],
-"names": [],
-"file": "top_bar.css"
-}

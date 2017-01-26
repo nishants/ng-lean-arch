@@ -1,57 +1,26 @@
+$mobile_at      : 750px;
+$alien_font     : 'Aldrich', sans-serif;
+$background_image: url(../images/twinkle.gif);
+
 @import "base";
-
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,600,500,700');
-
-.app-layer{
-  max-width: $screen_max_width;
-  margin: 0px auto;
-  width: 100%;
-}
+@import url('https://fonts.googleapis.com/css?family=Aldrich|Orbitron');
 
 body{
-  font-family: 'Raleway', sans-serif;
+  margin    : 0px;
   background: black;
-  @extend .app-layer;
 }
 
-.ruby-gem{
-  color: rgba(255, 255, 255, 0.8);
-  background: #e9573f;
-  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.39);
+@import "../app/app";
+
+@media screen and (max-width: $mobile_at) {
+  @import "../app/app.mobile";
+  .no-mobile{
+    display: none !important;
+  }
 }
 
-.top-bar-transition {
-  @include transition(all $top_bar_duration  ease);
+@media screen and (min-width: $mobile_at) {
+  .mobile-only{
+    display: none !important;
+  }
 }
-
-.bold-text{
-  font-weight: $super_bold_text;
-  color: $dark_text;
-}
-
-.small-light-text{
-  font-size: small;
-  color: $light_text;
-  font-weight: $medium_light_text;
-}
-
-.small-bold-text{ 
-  font-size: small;
-  font-weight: $medium_bold_text;
-}
-
-.under-lined{
-  border-bottom: 1px solid $border_light;
-  margin-bottom: $padding;
-  padding-bottom: $padding;
-}
-
-@import "homepage/page";
-@import "homepage/intro";
-@import "homepage/top_bar";
-@import "homepage/cover";
-@import "homepage/profile/title";
-@import "homepage/footer";
-@import "homepage/contacts";
-@import "homepage/profile/work-history";
-@import "mobile";
