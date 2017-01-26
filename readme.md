@@ -14,9 +14,9 @@
 
 
 ## Compile App
-``bash
+```bash
 rake compile
-``
+```
 
 
 install jade
