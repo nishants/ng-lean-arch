@@ -1,9 +1,8 @@
 .idea
 *-compiled.js
 *-compiled.js.map
-/lab/galaxy/style/index.css.map
-/lab/galaxy/app/app-compiled.js
-/lab/galaxy/app/app-compiled.js.map
-/lab/galaxy/node_modules/
-/lab/galaxy/reports/
-/lab/galaxy/app/app.html
+/.sass-cache/
+dist/**/*.js
+dist/**/*.html
+dist/**/*.css
+dist/**/*.css.map

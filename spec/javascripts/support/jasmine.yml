@@ -13,7 +13,7 @@
 src_files:
   - lib/angular-1.5.7.js
   - lib/angular-mock-1.5.7.js
-  - app/**/*.js
+  - src/**/*.js
 
 # stylesheets
 #
@@ -27,7 +27,7 @@ src_files:
 #   - stylesheets/*.css
 #
 stylesheets:
-  - stylesheets/**/*.css
+  - dist/css/**/*.css
 
 # helpers
 #
