@@ -18,9 +18,7 @@
 rake compile
 ```
 
-
-install jade
-install scss
-
-Run tests:
-rake jasmine
+## Run Tests
+```bash
+rake test
+```
