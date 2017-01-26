@@ -7,3 +7,4 @@ dist/**/*.html
 dist/**/*.css
 dist/**/*.css.map
 /bower_components/
+/node_modules/
