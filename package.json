@@ -14,14 +14,15 @@
     "karma-chrome-launcher": "^0.2.3",
     "karma-firefox-launcher": "^0.1.7",
     "karma-jasmine": "^0.3.8",
-    "karma-junit-reporter": "^0.4.1"
+    "karma-junit-reporter": "^0.4.1",
+    "uglify-js": "^2.7.5"
   },
   "scripts": {
     "postinstall": "bower install",
-
     "scss": "scss src/style/index.scss:dist/css/index.css",
     "jade": "jade --pretty src/index.jade -o dist",
-    "js": "browserify src/app/app.js -o dist/js/app.js",
+    "js-dev": "browserify src/app/app.js -o dist/js/app.js",
+    "js": "browserify src/app/app.js | uglifyjs > dist/js/app.js",
 
     "compile": "npm run scss && npm run jade && npm run js",
     "test-watch": "karma start karma.conf.js",
