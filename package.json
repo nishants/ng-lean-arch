@@ -17,14 +17,11 @@
   },
   "scripts": {
     "postinstall": "bower install",
-
-    "scss" : "scss src/style/index.scss:dist/css/index.css",
-    "jade" : "jade --pretty src/index.jade -o dist",
-    "compile" : "npm run scss && npm run jade",
-
+    "scss": "scss src/style/index.scss:dist/css/index.css",
+    "jade": "jade --pretty src/index.jade -o dist",
+    "compile": "npm run scss && npm run jade",
     "test-watch": "karma start karma.conf.js",
-    "test": "karma start karma.conf.js --single-run",
-
+    "test": "karma start karma.conf.js --single-run"
     "start": "http-server -a localhost -p 8000 -c-1 ./dist"
   }
 }
