@@ -1,6 +1,9 @@
 ## Running App
 - Open dist/index.html in browser
 
+## Mobile UI
+![alt text](https://raw.githubusercontent.com/nishants/star-wars/master/docs/demo/mobile.gif)
+
 ## Dev Dependencies
   - jade
   - scss
