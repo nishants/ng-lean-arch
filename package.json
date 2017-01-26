@@ -7,6 +7,7 @@
   "license": "WTFPL",
   "devDependencies": {
     "bower": "^1.7.7",
+    "browserify": "^14.0.0",
     "http-server": "^0.9.0",
     "jasmine-core": "^2.4.1",
     "karma": "^0.13.22",
@@ -17,11 +18,14 @@
   },
   "scripts": {
     "postinstall": "bower install",
+
     "scss": "scss src/style/index.scss:dist/css/index.css",
     "jade": "jade --pretty src/index.jade -o dist",
-    "compile": "npm run scss && npm run jade",
+    "js": "browserify src/app/app.js -o dist/js/app.js",
+
+    "compile": "npm run scss && npm run jade && npm run js",
     "test-watch": "karma start karma.conf.js",
-    "test": "karma start karma.conf.js --single-run"
+    "test": "karma start karma.conf.js --single-run",
     "start": "http-server -a localhost -p 8000 -c-1 ./dist"
   }
 }
