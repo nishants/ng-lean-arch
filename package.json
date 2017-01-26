@@ -8,6 +8,7 @@
   "devDependencies": {
     "bower": "^1.7.7",
     "browserify": "^14.0.0",
+    "concurrently": "^3.1.0",
     "http-server": "^0.9.0",
     "jasmine-core": "^2.4.1",
     "karma": "^0.13.22",
@@ -15,20 +16,26 @@
     "karma-firefox-launcher": "^0.1.7",
     "karma-jasmine": "^0.3.8",
     "karma-junit-reporter": "^0.4.1",
-    "uglify-js": "^2.7.5"
+    "uglify-js": "^2.7.5",
+    "watchify": "^3.9.0"
   },
   "scripts": {
     "postinstall": "bower install",
 
     "scss": "scss src/style/index.scss:dist/css/index.css",
+    "scss-dev": "scss --watch src/style/index.scss:dist/css/index.css",
+
     "jade": "jade --pretty src/index.jade -o dist",
-    "js-dev": "browserify src/app/app.js -o dist/js/app.js",
+    "jade-dev": "jade --watch --pretty src/index.jade -o dist",
+
+    "js-dev": "watchify src/app/app.js -o dist/js/app.js",
     "js": "browserify src/app/app.js | uglifyjs > dist/js/app.js",
 
-    "compile": "npm run scss && npm run jade && npm run js-dev",
+    "watch": "concurrently \"npm run scss-dev\" \"npm run jade-dev\" \"npm run js-dev\"",
     "package": "npm run scss && npm run jade && npm run js",
-    "test-watch": "karma start karma.conf.js",
-    "test": "karma start karma.conf.js --single-run",
+
+    "test": "karma start karma.conf.js",
+    "test-once": "karma start karma.conf.js --single-run",
     "start": "http-server -a localhost -p 8000 -c-1 ./dist"
   }
 }
