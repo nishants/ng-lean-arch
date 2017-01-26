@@ -16,12 +16,33 @@
   - Fontawesome(4.7.0)
 
 
-## Compile App
+## Package App
 ```bash
-rake compile
+npm run package
+```
+Compiled files are place in dist/
+
+## Run App
+```bash
+npm run start
+```
+or, open file dist/index.html in browser.
+
+## Run Tests Once
+```bash
+npm run test-once
 ```
 
-## Run Tests
+## Watch Js files and Run Tests
 ```bash
-rake test
+npm run test
 ```
+
+
+## Watch for changes and Recompile
+```bash
+npm run watch
+```
+This will re-compile app on any change to scss, js or jade files.
+
+Compiled files are place in dist/
