@@ -46,3 +46,4 @@ npm run watch
 This will re-compile app on any change to scss, js or jade files.
 
 Compiled files are place in dist/
+
