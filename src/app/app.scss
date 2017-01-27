@@ -7,6 +7,8 @@ $wizard_width   : $window_width;
 $station_color  : #316487;
 
 $white          : rgba(255, 255, 255, 0.95);
+$black          : rgba(0, 0, 0, 0.6);
+$dark_black     : rgba(0, 0, 0, 0.9);
 $bar_height     : 60px;
 $bottom_bar_color: $station_color;
 
@@ -37,6 +39,8 @@ $transition_function       : ease;
 
 $wizard_min_height: 300px;
 $home_max_width: 500px;
+$widget_top_offset: 56px;
+
 #main-content{
   position: relative;
   overflow: hidden;
@@ -47,9 +51,16 @@ $home_max_width: 500px;
     border    : 1px solid transparent;
     font-size : large;
     background-color: $theme_green_color;
+    outline   : none;
     @include transition(all $transition_time_normal $transition_function);
 
     @extend .title-text;
+  }
+  .caption{
+    font-size: small;
+    font-style: italic;
+    line-height: $line_height - $padding;
+    opacity: 0.5;
   }
   .thumbnail{
     height: $thumbnail_height;
@@ -71,3 +82,4 @@ $home_max_width: 500px;
 @import "planets/planets";
 @import "vehicles/vehicles";
 @import "mission-wizard/mission-wizard";
+@import "missions-widget/missions-widget";

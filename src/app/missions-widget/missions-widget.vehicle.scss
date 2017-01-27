@@ -1,0 +1,18 @@
+#missions-widget.vehicle{
+  .menu{
+    .select-planet{
+      @include transform(translateY(-100%));
+    }
+  }
+}
+
+#missions-widget:not(.vehicle){
+  .menu{
+    .selected-planet{
+      @include transform(translateY(-100%));
+    }
+    .select-vehicle{
+      @include transform(translateY(-100%));
+    }
+  }
+}

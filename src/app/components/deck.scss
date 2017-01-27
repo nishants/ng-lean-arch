@@ -10,12 +10,6 @@ ul.deck{
       .name{
         padding-top: $padding;
       }
-      .caption{
-        font-size: small;
-        font-style: italic;
-        line-height: $line_height - $padding;
-        opacity: 0.5;
-      }
       .icon{
         display: block;
         margin: auto;

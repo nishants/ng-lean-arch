@@ -2,7 +2,7 @@
   width: calc(100% - #{4*$padding});
   max-width: $home_max_width;
 
-  margin: $padding auto;
+  margin: $widget_top_offset auto $padding auto;
   height: $progress_height;
   position: relative;
   border-radius: $progress_height/2;

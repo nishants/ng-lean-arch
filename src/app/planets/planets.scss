@@ -1,15 +1,17 @@
 $loader_size: 40px;
 
-#mission-planet{
-  ul.deck{
-    > li {
-    }
-    >li.loader{
-      font-size: $loader_size;
-      border: 1px solid transparent !important;
-    }
-    > li.assigned {
-      display: none;
+ul.planets{
+  >li.loader{
+    font-size: $loader_size;
+    border: 1px solid transparent !important;
+  }
+  > li.assigned {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+  > li {
+    .icon{
+
     }
   }
 }

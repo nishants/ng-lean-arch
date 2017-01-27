@@ -1,36 +1,34 @@
 $vehicle_height: 140px;
-#mission-vehicle{
-  ul.deck{
-    > li.none-left, > li.no-range {
-      position: relative;
-      pointer-events: none;
-      border: 1px solid $white_light !important;
-    }
-    > li:after{
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      line-height: $vehicle_height;
-      width: 100%;
-      color: $white;
-      background: rgba(0, 0, 0, 0.8);
-      opacity: 0;
-      content: " ";
-      pointer-events: none;
-      @include transition(all $transition_time_slow $transition_function);
-    }
+ul.vehicles{
+  > li.none-left, > li.no-range {
+    position: relative;
+    pointer-events: none;
+    border: 1px solid $white_light !important;
+  }
+  > li:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    line-height: $vehicle_height;
+    width: 100%;
+    color: $white;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    content: " ";
+    pointer-events: none;
+    @include transition(all $transition_time_slow $transition_function);
+  }
 
-    >li.no-range:after,> li.none-left:after{
-      opacity: 1;
-      cursor: not-allowed;
-    }
+  >li.no-range:after,> li.none-left:after{
+    opacity: 1;
+    cursor: not-allowed;
+  }
 
-    >li.no-range:after{
-      content: "Out Of Range";
-    }
-    > li.none-left:after{
-      content: "None Left";
-    }
+  >li.no-range:after{
+    content: "Out Of Range";
+  }
+  > li.none-left:after{
+    content: "None Left";
   }
 }

@@ -1,6 +1,4 @@
-.card.planet
-  img.icon(ng-src='{{planet.icon}}')
-  .name(ng-bind='planet.name')
-  .distance.caption
-    span(ng-bind='planet.distance')
-    span  megamiles
+img.icon(ng-src='{{planet.icon}}')
+.detail
+  span.name(ng-bind='planet.name')
+  span.caption  ({{planet.distance}} megamiles)
