@@ -58,6 +58,7 @@
     }
     .window{
       max-width   : 100%;
+      min-width: 350px;
       overflow: hidden;
 
       ul.panes{

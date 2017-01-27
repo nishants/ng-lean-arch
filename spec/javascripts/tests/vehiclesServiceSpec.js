@@ -27,8 +27,8 @@ describe('Vehicles', function () {
       $provide.value("vehicleIcons", vehicleIcons);
     });
 
-    inject(function (_vehiclesService_, $injector, _$q_) {
-      service       = _vehiclesService_;
+    inject(function (_VehiclesService_, $injector, _$q_) {
+      service       = _VehiclesService_;
       $httpBackend  = $injector.get('$httpBackend');
       $q = _$q_;
     });

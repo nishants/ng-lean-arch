@@ -1,4 +1,4 @@
-app.service("vehiclesService", ["$http", "remote", "requestConfig", "vehicleIcons", function($http, remote, requestConfig, vehicleIcons){
+app.service("VehiclesService", ["$http", "remote", "requestConfig", "vehicleIcons", function($http, remote, requestConfig, vehicleIcons){
 	var withIcons = function(data){
 		var vehicle = {
 			name: data.name,

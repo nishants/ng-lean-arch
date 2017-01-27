@@ -3,7 +3,7 @@ describe('Missions', function () {
       $q,
       $httpBackend,
       remote = "http://server.com/api/v1",
-      vehiclesService,
+      VehiclesService,
       PlanetsService,
       vehicles = [
         {name: "Vehicle One", total_no :3},
@@ -44,9 +44,9 @@ describe('Missions', function () {
       $provide.value("planetIcons", planetIcons);
     });
 
-    inject(function (_MissionsService_,_PlanetsService_,_vehiclesService_, $injector, _$q_) {
+    inject(function (_MissionsService_,_PlanetsService_,_VehiclesService_, $injector, _$q_) {
       service         = _MissionsService_;
-      vehiclesService = _vehiclesService_;
+      VehiclesService = _VehiclesService_;
       PlanetsService  =_PlanetsService_;
 
       $httpBackend  = $injector.get('$httpBackend');
@@ -66,7 +66,7 @@ describe('Missions', function () {
 
   it("can add/remove more mission", function () {
     var planet  = PlanetsService.list[0],
-        vehicle = vehiclesService.list[0];
+        vehicle = VehiclesService.list[0];
 
     service.add(planet, vehicle);
     expect(service.list).toEqual([{planet: planet, vehicle: vehicle}]);
@@ -77,9 +77,9 @@ describe('Missions', function () {
   });
   describe('Reset Missions', function () {
     beforeEach(function() {
-      service.add(PlanetsService.list[0], vehiclesService.list[0]);
-      service.add(PlanetsService.list[1], vehiclesService.list[1]);
-      service.add(PlanetsService.list[2], vehiclesService.list[2]);
+      service.add(PlanetsService.list[0], VehiclesService.list[0]);
+      service.add(PlanetsService.list[1], VehiclesService.list[1]);
+      service.add(PlanetsService.list[2], VehiclesService.list[2]);
     });
 
     it("should remove all missions", function () {
@@ -95,7 +95,7 @@ describe('Missions', function () {
 
     it("should reset vehicles", function () {
       service.reset();
-      expect(vehiclesService.list).toEqual(helper.likeArray(expectedVehiclesList));
+      expect(VehiclesService.list).toEqual(helper.likeArray(expectedVehiclesList));
     });
 
   });

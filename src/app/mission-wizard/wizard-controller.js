@@ -1,6 +1,6 @@
-app.controller("WizardController", ["$scope", "PlanetsService", "vehiclesService", "WizardService", function ($scope, PlanetsService, vehiclesService, WizardService) {
+app.controller("WizardController", ["$scope", "PlanetsService", "VehiclesService", "WizardService", function ($scope, PlanetsService, VehiclesService, WizardService) {
 	$scope.planets  = PlanetsService;
-	$scope.vehicles = vehiclesService;
+	$scope.vehicles = VehiclesService;
 	$scope.wizard   = WizardService;
 }]);
 
