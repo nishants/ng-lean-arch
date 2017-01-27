@@ -1,10 +1,9 @@
 $buttonHeight  : 40px;
-$vehiclesHeight: 340px;
+$vehiclesHeight: 184px;
 $planetsHeight : 310px;
-$menuHeight    : 340px;
-$selectedPlanetHeight    : $buttonHeight;
+$menuHeight    : $planetsHeight;
 $iconSize      : 25px;
-$planet_width  : 300px;
+$planet_width  : 350px;
 
 #missions-widget{
   position: fixed;
@@ -19,7 +18,6 @@ $planet_width  : 300px;
     color: $theme_green_color;
     display: block;
     font-size: large;
-    margin: 0px $padding;
     width: calc(100% - 2 * #{$padding});
     line-height: $buttonHeight;
   }
@@ -44,23 +42,23 @@ $planet_width  : 300px;
   .menu{
     position: relative;
     width: 100%;
-    height: $menuHeight + $selectedPlanetHeight;
+    height: $menuHeight;
+    border: 1px solid $theme_green_disabled;
+    background-color: black;
     @extend .title-text;
-
     .sub-menu{
       width: 100%;
-      border: 1px solid $theme_green_disabled;
-      background-color: $dark_black;
-      @include transition(transform $transition_time_medium $transition_function);
+      @include transition(all $transition_time_medium $transition_function);
       >label{
         @extend .head-text;
       }
       > ul {
         @extend .undo-list;
         > li {
+          position: relative;
           padding: $padding;
           color : $theme_green_text;
-          border-bottom: 1px solid $theme_green_disabled;
+          border-top: 1px solid $theme_green_disabled;
           > div{
             display: block;
             width: $planet_width;
@@ -89,9 +87,10 @@ $planet_width  : 300px;
       position: absolute;
       top: 0;
       width: 100%;
-      line-height: $selectedPlanetHeight;
+      line-height: $buttonHeight;
+      font-size: small;
+      color: $white_light;
       background-color: $dark_black;
-      @extend .head-text;
       border: 1px solid transparent;
     }
     .select-vehicle{

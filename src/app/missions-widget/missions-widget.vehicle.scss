@@ -1,7 +1,8 @@
 #missions-widget.vehicle{
   .menu{
     .select-planet{
-      @include transform(translateY(-100%));
+      opacity : 0;
+      pointer-events: none;
     }
   }
 }
@@ -9,10 +10,10 @@
 #missions-widget:not(.vehicle){
   .menu{
     .selected-planet{
-      @include transform(translateY(-100%));
+      @include transform(scale(0));
     }
     .select-vehicle{
-      @include transform(translateY(-100%));
+      opacity: 0;
     }
   }
 }

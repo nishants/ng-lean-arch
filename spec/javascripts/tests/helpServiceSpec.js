@@ -23,7 +23,7 @@ describe('Help', function() {
           name    : "send missionaries",
           ui      : {},
           missions: {list: [{}], remaining(){return 0;}},
-          expected: "Send Missionaires"
+          expected: "Send Missionaries"
         }
 
       ];

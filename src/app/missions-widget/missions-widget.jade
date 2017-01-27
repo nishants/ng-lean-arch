@@ -1,5 +1,5 @@
 .actions
-  button.create(ng-click='createMission()')  Create
+  button.create(ng-click='createMission()', ng-bind='help.message(missions)')
   button.cancel(ng-click='wizard.reset()') Cancel
 .menu
   .sub-menu.select-planet
@@ -19,5 +19,6 @@
         div
           include ../vehicles/vehicle
 
-  .selected-planet
-    label Donlon (100 megamiles)
+  .selected-planet(ng-click='wizard.showVehicle(false)')
+    label {{wizard.planet.name}} ({{wizard.planet.distance}} megamiles)
+    label.fa.fa-caret-down

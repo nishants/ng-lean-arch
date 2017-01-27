@@ -30,7 +30,7 @@ app.service("HelpService", [function () {
 			{
 				name: "send-mission",
 				message: function () {
-					return "Send Missionaires";
+					return "Send Missionaries";
 				},
 				select: function (missions) {
 					return missions.remaining() == 0;

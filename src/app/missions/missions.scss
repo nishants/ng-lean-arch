@@ -16,7 +16,7 @@ $cancel_width  : 50px;
       line-height: 40px;
       color     : $theme_green_text;
       text-transform: capitalize;
-      text-align: center;
+      text-align: left;
       width     : $padding*2 + $planet_width + $vehicle_width + $overview_width + $cancel_width;
       padding: 0px $padding;
       @extend .title-text;

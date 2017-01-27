@@ -1,4 +1,4 @@
-$loader_size: 40px;
+$loader_size: 20px;
 
 ul.planets{
   >li.loader{
@@ -6,8 +6,10 @@ ul.planets{
     border: 1px solid transparent !important;
   }
   > li.assigned {
-    opacity: 0.3;
     pointer-events: none;
+    > * {
+      opacity: 0.3;
+    }
   }
   > li {
     .icon{
