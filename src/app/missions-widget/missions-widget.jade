@@ -4,7 +4,7 @@
   button.cancel(ng-click='wizard.reset()') Cancel
 .menu
   .sub-menu.select-planet
-    label Select Planet
+    label 1. Select Planet
     ul.planets
       li.loader(ng-show='!planets.list.length')
         div.fa.fa-circle-o-notch.fa-spin
@@ -12,7 +12,7 @@
         div
           include ../planets/planet
   .sub-menu.select-vehicle
-    label Select Vehicle
+    label 2. Select Vehicle
     ul.vehicles
       li.loader(ng-show='!vehicles.list.length')
         div.fa.fa-circle-o-notch.fa-spin

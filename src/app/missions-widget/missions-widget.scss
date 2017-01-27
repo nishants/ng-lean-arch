@@ -1,7 +1,7 @@
 $buttonHeight  : 40px;
-$vehiclesHeight: 184px;
-$planetsHeight : 310px;
-$menuHeight    : $planetsHeight;
+$vehiclesHeight: 270px;
+$planetsHeight : 40px;
+$menuHeight    : 480px;
 $iconSize      : 25px;
 $planet_width  : 350px;
 
@@ -21,6 +21,7 @@ $planet_width  : 350px;
     font-size: large;
     width: calc(100% - 2 * #{$padding});
     line-height: $buttonHeight;
+    padding: $padding;
   }
   .backdrop{
     position: fixed;
@@ -67,7 +68,7 @@ $planet_width  : 350px;
         @extend .undo-list;
         > li {
           position: relative;
-          padding: $padding;
+          padding: $padding*2;
           color : $theme_green_text;
           border-top: 1px solid $theme_green_disabled;
           > div{
@@ -103,6 +104,7 @@ $planet_width  : 350px;
       color: $white_light;
       background-color: $dark_black;
       border: 1px solid transparent;
+      padding: $padding;
     }
     .select-vehicle{
       position: absolute;

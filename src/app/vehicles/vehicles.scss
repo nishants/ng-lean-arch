@@ -13,9 +13,9 @@ ul.vehicles{
     left: 0;
     height: 100%;
     width: 100%;
+    padding : $padding;
     box-sizing: border-box;
     line-height: $vehicle_height;
-    padding-right: $padding;
     text-align: right;
     color: $white_light;
     background: rgba(0, 0, 0, 0.8);
