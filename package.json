@@ -31,7 +31,8 @@
     "js-dev": "watchify src/_app.js -o dist/js/app.js",
     "js": "browserify src/_app.js | uglifyjs > dist/js/app.js",
     "watch": "concurrently \"npm run lint\" \"npm run scss-dev\" \"npm run jade-dev\" \"npm run js-dev\"",
-    "package": "npm run lint && npm run scss && npm run jade && npm run js",
+
+    "package": " npm run test-once && npm run js && npm run lint && npm run scss && npm run jade",
     "test": "karma start karma.conf.js",
     "test-once": "karma start karma.conf.js --single-run",
     "start": "http-server -a localhost -p 8000 -c-1 ./dist"
