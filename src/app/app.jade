@@ -13,6 +13,6 @@
         include create-missions/create-mission
       .game-progress(class="{{progress.state}}")
       #missions-selected
-        include missions/missions
+        include list-missions/missions
     #game-result.modal-window(ng-controller="ResultController", ng-class='{"show" : result.outcome || result.loading, "won": result.outcome.status,"lost": result.outcome && !result.outcome.status, "loading": result.loading}')
       include result/result
