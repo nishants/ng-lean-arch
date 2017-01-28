@@ -1,4 +1,4 @@
-app.service("WizardService", ["MissionsService","$timeout", function (MissionsService) {
+app.service("CreateMissionService", ["MissionsService","$timeout", function (MissionsService) {
 	var wizard = {
 		planet    : null,
 		vehicle   : null,

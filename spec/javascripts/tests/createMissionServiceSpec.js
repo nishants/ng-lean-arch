@@ -13,8 +13,8 @@ describe('Missions', function () {
       $provide.value("MissionsService", MissionsService);
     });
 
-    inject(function (_WizardService_, $injector, _$q_) {
-      service         = _WizardService_;
+    inject(function (_CreateMissionService_, $injector, _$q_) {
+      service         = _CreateMissionService_;
       $httpBackend  = $injector.get('$httpBackend');
       $q = _$q_;
     });
