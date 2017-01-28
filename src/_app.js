@@ -10,5 +10,5 @@ require("./app/components/game-progress.js");
 require("./app/components/fullscreen.js");
 require("./app/planets/planets-service.js");
 require("./app/vehicles/vehicles-service.js");
-require("./app/mission-wizard/wizard-controller.js");
-require("./app/mission-wizard/wizard-service.js");
+require("./app/create-missions/create-mission-controller.js");
+require("./app/create-missions/create-mission-service.js");

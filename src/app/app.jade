@@ -10,7 +10,7 @@
       #help-button
         span.fa.fa-question-circle(ng-click='ui.showHelp = true')
       #missions-widget(ng-controller='WizardController', ng-class='{"create" : wizard.showWizard,"vehicle" : wizard.selectVehicle  }')
-        include missions-widget/missions-widget
+        include create-missions/create-mission
       .game-progress(class="{{progress.state}}")
       #missions-selected
         include missions/missions
