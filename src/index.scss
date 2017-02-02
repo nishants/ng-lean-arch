@@ -1,8 +1,8 @@
 $mobile_at      : 750px;
 $alien_font     : 'Aldrich', sans-serif;
-$background_image: url(../images/twinkle.gif);
+$background_image: url(images/twinkle.gif);
 
-@import "base";
+@import "app/components/base";
 @import url('https://fonts.googleapis.com/css?family=Aldrich|Orbitron');
 
 body{
@@ -10,10 +10,10 @@ body{
   background: black;
 }
 
-@import "../app/app";
+@import "app/app";
 
 @media screen and (max-width: $mobile_at) {
-  @import "../app/app.mobile";
+  @import "app/app.mobile";
   .no-mobile{
     display: none !important;
   }

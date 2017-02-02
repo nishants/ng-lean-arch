@@ -24,12 +24,12 @@
   "scripts": {
     "postinstall": "bower install",
     "lint": "eslint src; exit 0",
-    "scss": "scss src/style/index.scss:dist/css/index.css",
-    "scss-dev": "watch 'scss --watch src/style/index.scss:dist/css/index.css' src",
+    "scss": "scss src/index.scss:dist/index.css",
+    "scss-dev": "watch 'scss --watch src/index.scss:dist/index.css' src",
     "jade": "jade --pretty src/index.jade -o dist",
     "jade-dev": "jade --watch --pretty src/index.jade -o dist",
-    "js-dev": "watchify src/_app.js -o dist/js/app.js",
-    "js": "browserify src/_app.js | uglifyjs > dist/js/app.js",
+    "js-dev": "watchify src/index.js -o dist/index.js",
+    "js": "browserify src/index.js | uglifyjs > dist/index.js",
 
     "package": " npm run test-once && npm run js && npm run lint && npm run scss && npm run jade",
     "test": "karma start karma.conf.js",
